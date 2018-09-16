@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ano Bissexto</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+		function calcular(ano) {
+
+			 return ((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0);
+		}
+
+		var ano = '2016';
+		if(calcular(ano)) alert( ano + " é um ano bissexto.");
+		else alert( ano + " não e um ano bissexto.");
+
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

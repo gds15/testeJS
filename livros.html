@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>ex3</title>
+
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+
+		// Para criar propriedades podemos usar a palavra var ou this. Se utilizarmos a palavra var o atributo vai ficar privado e se utilizarmos a palavra this o atributo vai ficar publico
+
+		function Loja() {
+			var nomeLoja = "teste";
+			var cnpj;
+
+			this.getNomeLoja = function() {
+				return nomeLoja;
+			}
+
+			this.getCnpj = function() {
+				return cnpj;
+			}
+		}
+
+		function Pessoa() {
+    		var nome;
+    		var endereco;
+    		var telefone;
+ 
+		    this.getNome = function () {
+		        return nome;
+		    };
+ 
+		    this.setNome = function (value) {
+		        nome = value;
+		    };
+
+		     this.getEndereco = function () {
+		        return endereco;
+		    };
+ 
+		    this.setEndereco = function (value) {
+		        endereco = value;
+		    };
+
+		     this.getTelefone = function () {
+		        return telefone;
+		    };
+ 
+		    this.setTelefone = function (value) {
+		        telefone = value;
+		    };
+		}
+
+
+		function Cliente() {
+			var cpf;
+			var email;
+
+			this.getCpf = function() {
+				return cpf;
+			}
+
+			this.setCpf = function(value) {
+				cpf = value;
+			}
+
+			this.getEmail = function() {
+				return email;
+			}
+
+			this.setEmail = function(value) {
+				email = value;
+			}
+		}
+
+
+		function Vendedor() {
+			var salario;
+
+			this.getSalario = function() {
+				return salario;
+			}
+
+			this.setSalario = function(value) {
+				salario = value;
+			}
+		}
+
+		//parte do livro
+
+		function Livro() {
+			var autor;
+			var nPaginas;
+			var valor;
+
+			this.getValor = function() {
+				return valor;
+			}
+
+			this.setValor = function(value) {
+				valor = value;
+			}
+
+
+			this.getAutor = function() {
+				return autor;
+			}
+
+			this.setAutor = function(value) {
+				autor = value;
+			}
+
+			this.getNpaginas = function() {
+				return nPaginas;
+			}
+
+			this.setNpaginas = function(value) {
+				nPaginas = value;
+			}
+		}
+
+		function Ebook() {
+			var formato;
+
+			this.getFormato = function() {
+				return formato;
+			}
+
+			this.setFormato = function(value) {
+				formato = value;
+			}
+		}
+
+		function Impresso() {
+			var tamanho;
+
+			this.getTamanho = function() {
+				return tamanho;
+			}
+
+			this.setTamanho = function(value) {
+				tamanho = value;
+			}
+		}
+
+		//parte das vendas
+
+		function Venda() {
+			var formapagamento;
+			var itens;
+			var valor;
+		}
+
+
+		//conforme pesquisas que fizemos Para criar herança no Javascript vamos utilizar prototype vamos transferir propriedades e métodos de um objeto para outro
+
+		Vendedor.prototype = new Pessoa();
+		Cliente.prototype = new Pessoa();
+		Ebook.prototype = new Livro();
+		Impresso.prototype = new Livro();
+
+		function document_OnLoad() {
+		    oCliente = new Cliente();
+		    oVendedor = new vendedor();
+		    oEbook = new Ebook();
+		    oImpresso = new Impresso();
+	 
+		    oCliente.setCPF('111111');
+		    oCliente.setNome('João');
+		 
+		}
+		
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

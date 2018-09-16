@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>isograma</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+function isograma(p){
+    p = p.toLowerCase();
+    var i, j;
+    for(i=0; i<p.length; i+=1){
+        for(j=i+1; j<p.length; j+=1){
+            if(p[i] == p[j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+var p = "gugu";
+if(isograma(p)) alert( p + " é um isograma.");
+else alert( p + " não e um isograma.");
+</script>
+</body>
+</html>
